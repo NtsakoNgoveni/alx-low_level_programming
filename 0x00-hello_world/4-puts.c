@@ -1,8 +1,10 @@
-/* this program prints a string by means of puts function*/
 #include <stdio.h>
-
-int main (void)
-{	
-	puts("\"Programming is like building a multilingual puzzle");
-	return 0;
+/**
+*main - A program that a string using the puts function
+*Return: 0 (success)
+*/
+int main(void)
+{
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
 }
