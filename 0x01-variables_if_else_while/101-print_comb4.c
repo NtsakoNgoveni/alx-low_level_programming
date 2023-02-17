@@ -19,7 +19,7 @@ for (one = 0; one <= 7; one++)
 				putchar(two + '0');
 				putchar(tree + '0');
 
-				if ((two != 8) || (one != 7))
+					if (two != 8 || one != 7)
 					{
 						putchar(',');
 						putchar(' ');
