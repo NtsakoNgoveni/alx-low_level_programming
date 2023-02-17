@@ -9,14 +9,7 @@ int main(void)
 
 	while (n < 10)
 	{	putchar(n + '0');
-		n++;
-	}
-	while (n < 9)
-	{	putchar(',');
-		n++;
-	}
-	while (n < 10)
-	{
+		putchar(',');
 		putchar(' ');
 		n++;
 	}
