@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdlib.h>
+#include <stdio.h>
 /**
  *main - generates a random number determines ifits postive or negative
  *Return: 0 (success)
