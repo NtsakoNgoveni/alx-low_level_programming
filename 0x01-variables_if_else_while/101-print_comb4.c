@@ -5,25 +5,25 @@
  */
 int main(void)
 {
-	int one = 0, two = 1, tree = 2;
+int one = 0, two = 1, tree = 2;
 
-	for (one = 0; one <= 7; one++)
+for (one = 0; one <= 7; one++)
 	{
-		for (; two <= 8; two++)
+	for (two = 1; two <= 8; two++)
+	{
+		for (tree = 2; tree <= 9; tree++)
 		{
-			for (; tree <= 9; tree++)
-			{
-				if ((tree > two) && (two > one))
+			if (tree > two && two > one)
 				{
-					putchar(one + '0');
-					putchar(two + '0');
-					putchar(tree + '0');
+				putchar(one + '0');
+				putchar(two + '0');
+				putchar(tree + '0');
 
-					if ((tree != 9) || (two != 8) || (one != 7))
-						{
-							putchar(',');
-							putchar(' ');
-						}
+				if ((two != 8) || (one != 7))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
