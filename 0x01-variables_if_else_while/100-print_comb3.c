@@ -13,8 +13,8 @@ int main(void)
 		{
 			if (f > l)
 			{
-			putchar('l');
-			putchar('f');
+			putchar(l + '0');
+			putchar(f + '0');
 			if ((f != 9) && (l != 8))
 			{
 			putchar(',');
