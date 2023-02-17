@@ -10,7 +10,9 @@ int main(void)
 	while (lc <= 'z')
 	{
 		if (lc == 'q' || lc == 'e')
+		{	
 			continue;
+		}
 		putchar(lc);
 		lc++;
 	}
