@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int l = 0 , f = 1;
+	int l = 0, f = 1;
 
 	for (l = 0; l <= 8; l++)
 	{
@@ -13,15 +13,18 @@ int main(void)
 		{
 			if (f > l)
 			{
-			putchar(l + '0');
-			putchar(f + '0');
-			if ((f != 9) && (l != 8))
-			{
-			putchar(',');
-			putchar(' ');
-			}
+
+				putchar(l + '0');
+				putchar(f + '0');
+				if ((f != 9) || (l != 8))
+				{
+
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
