@@ -26,4 +26,4 @@ void time_table(void)
 		}
 		_putchar('\n');
 	}
-
+}
