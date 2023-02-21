@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * time_table - prints the 9 times table
+ * times_table - prints the 9 times table
  *Return:void
  */
 void times_table(void)
@@ -21,6 +21,7 @@ void times_table(void)
 			if (i != 9 || k != 9)
 			{
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 		}
