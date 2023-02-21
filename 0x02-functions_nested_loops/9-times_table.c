@@ -7,15 +7,15 @@ void times_table(void)
 {
 	int k, i, x, u, d;
 
-	for (x = 0; x <= 9; x++)
+	for (k = 0; k <= 9; k++)
 	{
-		for (y = 0; y <= 9; y++)
+		for (i = 0; i <= 9; i++)
 		{
-		z = x * y;
-		if (z > 9)
+		x = k * i;
+		if (x > 9)
 		{
-		u = z % 10;
-		d = (z - u) /  10;
+		u = x % 10;
+		d = (x - u) /  10;
 		_putchar(44);
 		_putchar(32);
 		_putchar(d + '0');
@@ -23,7 +23,7 @@ void times_table(void)
 		}
 		else
 		{
-		if (x != 0)
+		if (i != 0)
 		{
 		_putchar(44);
 		_putchar(32);
