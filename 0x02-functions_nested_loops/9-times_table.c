@@ -20,7 +20,7 @@ void times_table(void)
 				_putchar(i * k + '0');
 			if (i != 9 || k != 9)
 			{
-				if (k >= 2 && i >= 4)
+				if ((k >= 2 && i >= 4) || (k >= 3 && i >= 3) || (k >= 4 && i >= 2) || (k >= 5 && i >= 1))
 				{
 				_putchar(',');
 				_putchar(' ');
