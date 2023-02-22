@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	int n = 1, sum = 0, k = (n % 3), j = (n % 5);
+	int n, sum = 0;
 
 	for (n = 1; n < 1024; n++)
 	{
-	if ((j == 0) || (k == 0))
+	if ((n % 3) == 0 || (n % 5) == 0)
 	{
 	sum += n;
 	}
