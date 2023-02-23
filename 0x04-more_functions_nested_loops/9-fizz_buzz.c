@@ -3,7 +3,7 @@
  * main - prints 0-100 and prints fizz if n is a multiple
  * of 3 and buzz if multiple of five and fizzbuzz
  * if multiple of 3 and 5
- *Return:void
+ *Return:0
  */
 int main(void)
 {
@@ -20,4 +20,5 @@ else if (i % 3 == 0 && i % 5 == 0)
 else
 	printf("%d ", i);
 }
+return (0);
 }
