@@ -6,7 +6,7 @@
  */
 oid print_triangle(int size)
 {
-int size, i, k, n;
+int i, k, n;
 
 if (size > 0)
 {
