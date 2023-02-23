@@ -4,7 +4,7 @@
  *@size: size of the triangle that will be printed
  *Return:void
  */
-oid print_triangle(int size)
+void print_triangle(int size)
 {
 int i, k, n;
 
@@ -21,3 +21,4 @@ _putchar('\n');
 }
 else
 _putchar('\n');
+}
