@@ -25,6 +25,7 @@ for (i = 1; i < len; i++)
 		}
 	}
 }
+if (str[0] == 'a' && str[0] == 'z')
 str[0] -= ('a' - 'A');
 return (str);
 }
