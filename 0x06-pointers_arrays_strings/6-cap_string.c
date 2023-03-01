@@ -21,11 +21,14 @@ for (i = 0; i < len; i++)
 	{
 		if (str[i] == sp[k] && str[i + 1] >= 'a' && str[i + 1] <= 'z')
 		{
-		str[i + 1] -= ('a' - 'A');
+			if (str[i] == '\t')
+				str[i] = ' ';
+			str[i + 1] -= ('a' - 'A');
 		}
 	}
 }
 if (str[0] == 'a' && str[0] == 'z')
-str[0] -= ('a' - 'A');
+	str[0] -= ('a' - 'A');
+
 return (str);
 }
