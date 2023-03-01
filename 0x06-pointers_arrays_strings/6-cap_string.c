@@ -15,7 +15,7 @@ char sp[] =	{' ', '\t', '\n', ',', ';', '.',
 for (i = 0; str[i]; i++)
 	len++;
 
-for (i = 1; i < len; i++)
+for (i = 0; i < len; i++)
 {
 	for (k = 0; k < 13; k++)
 	{
