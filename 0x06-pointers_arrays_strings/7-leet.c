@@ -1,16 +1,12 @@
 #include "main.h"
 /**
- * leet - encodes a string by assigning some alphabet characters a digit value
- * a = 4, e = 3, o = 0, t = 7 and l = 1
- * note that both lowwercase and uppercase values of the characters above
- * are encoded
- * @s: is the array to be encoded
- * Return: A pointer to a modified string
+ * leet - encode into 1337speak
+ * @n: input value
+ * Return: n value
  */
-
-char *leet(char *s)
+char *leet(char *n)
 {
-int i, j;
+	int i, j;
 	char s1[] = "aAeEoOtTlL";
 	char s2[] = "4433007711";
 
@@ -26,3 +22,4 @@ int i, j;
 	}
 	return (n);
 }
+
