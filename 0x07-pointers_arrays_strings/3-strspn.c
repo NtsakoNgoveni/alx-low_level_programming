@@ -22,5 +22,6 @@ for (i = 0; s[i]; i++)
 		return (num);
 	}
 }
+return (0);
 }
 
