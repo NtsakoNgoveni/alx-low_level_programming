@@ -29,5 +29,5 @@ if (ptr - needle == 0)
 return (&haystack[j]);
 }
 }
-return (NULL);
+return (0);
 }
