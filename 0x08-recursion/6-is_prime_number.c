@@ -15,11 +15,12 @@ return (1);
 else if (n % i == 0)
 return (0);
 
+else if (i == 0 || i < 0)
+return (0);
+
 else
 return (check_prime(n, i - 1));
 
-if (i == 0 || i < 0)
-return (0);
 }
 
 int check_prime(int n, int i);
