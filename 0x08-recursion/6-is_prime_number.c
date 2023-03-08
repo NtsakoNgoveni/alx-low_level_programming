@@ -8,14 +8,17 @@
  */
 int check_prime(int n, int i)
 {
-if (n % i == 0)
-return (0);
 
-return (check_prime(n, i - 1));
 if (i == 1)
 return (1);
 
-else if (i == 0 || i < 0)
+else if (n % i == 0)
+return (0);
+
+else
+return (check_prime(n, i - 1));
+
+if (i == 0 || i < 0)
 return (0);
 }
 
