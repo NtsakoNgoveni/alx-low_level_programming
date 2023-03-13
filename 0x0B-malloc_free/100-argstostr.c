@@ -29,10 +29,10 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (k = 0, j = 0; av[i][k]; k++, j++)
+		for (k = 0; av[i][k]; k++, j++)
 		ptr[j] = av[i][k];
 
-		if (ptr[j] == '\0')
+		if (ptr[j++] == '\0')
 		ptr[j] = '\n';
 	}
 	ptr[j] = '\0';
