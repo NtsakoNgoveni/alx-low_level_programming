@@ -35,5 +35,7 @@ char *str_concat(char *s1, char *s2)
 	for (k = 0; s2[k]; k++)
 		combo[i] = s2[k];
 
+	combo[i] = '\0';
+
 	return (combo);
 }
