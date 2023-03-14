@@ -11,7 +11,7 @@ char **strtow(char *str)
 	int i, k, j = -1, a = 0, start, end, word = 0;
 	char **ptr;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str[i] == '\0')
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
@@ -53,6 +53,6 @@ char **strtow(char *str)
 			ptr[j][a] = '\0';
 		}
 	}
-	ptr[j +1] = NULL;
+	ptr[j + 1] = NULL;
 	return (ptr);
 }
