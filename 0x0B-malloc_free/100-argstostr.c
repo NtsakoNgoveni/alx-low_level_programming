@@ -32,7 +32,6 @@ char *argstostr(int ac, char **av)
 		for (k = 0; av[i][k]; k++, j++)
 		ptr[j] = av[i][k];
 
-		if (ptr[j] == '\0')
 		ptr[j] = '\n';
 	}
 	ptr[j] = '\0';
