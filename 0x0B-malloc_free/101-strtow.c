@@ -9,9 +9,9 @@
 char **strtow(char *str)
 {
 	int i, k, j = -1, a = 0, start, end, word = 0;
-	char **ptr;
+	char **ptr = NULL;
 
-	if (str == NULL || str[i] == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
