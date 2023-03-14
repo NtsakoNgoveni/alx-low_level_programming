@@ -9,7 +9,7 @@
 char **strtow(char *str)
 {
 	int i, k, j = -1, a = 0, start, end, word = 0;
-	char **ptr = NULL;
+	char **ptr;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
@@ -19,6 +19,8 @@ char **strtow(char *str)
 		if ((str[i - 1] == ' ' || i == 0) && str[i] != ' ')
 			word++;
 	}
+	if (word == 0)
+		return (NULL);
 	ptr = malloc(sizeof(char *) * (word + 1));
 
 	if (ptr == NULL)
