@@ -41,7 +41,7 @@ char **strtow(char *str)
 			ptr[j] = malloc(sizeof(char) * (k + 1));
 			if (ptr[j] == NULL)
 			{
-				for (i = 0; i < j; j++)
+				for (i = 0; i < j; i++)
 					free(ptr[i]);
 				free(ptr);
 				return (NULL);
