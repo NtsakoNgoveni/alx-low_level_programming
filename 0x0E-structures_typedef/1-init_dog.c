@@ -9,10 +9,10 @@
  * Return:void
  */
 
-void init_dog(struct dog *d, char *name, float age, char *owner)
+void init_dog(struct dog_t *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
-		d = malloc(sizeof(struct dog));
+		d = malloc(sizeof(struct dog_t));
 	if (d == NULL)
 		return (NULL);
 	d->name = name;
