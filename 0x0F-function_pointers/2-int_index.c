@@ -1,4 +1,5 @@
 #include "function_pointer.h"
+#include <stdlib.h>
 /**
  * int_index-searches for an inter in an array
  * @array:pointer to array that must be searched
