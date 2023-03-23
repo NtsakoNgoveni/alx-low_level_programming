@@ -26,7 +26,7 @@ printf("%s", str);
 if ((seperator != NULL) && ((i + 1) != n))
 printf("%s", seperator);
 
-va_end(args);
-printf("\n");
 }
+printf("\n");
+va_end(args);
 }
