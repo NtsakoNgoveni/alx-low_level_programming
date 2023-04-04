@@ -11,8 +11,8 @@ size_t list_len(const listint_t *h)
 
 	if (!h || h->next == NULL)
 		return (0);
-	slow = head->next;
-	fast = (head->next)->next;
+	slow = h->next;
+	fast = (h->next)->next;
 
 
 	while (slow)
