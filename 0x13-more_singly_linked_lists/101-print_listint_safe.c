@@ -20,16 +20,16 @@ size_t list_len(const listint_t *h)
 
 			while (slow != fast)
 			{
+				len++;
 				slow = slow->next;
 				fast = fast->next;
-				len++;
 			}
 			slow = slow->next;
 
 			while (slow != fast)
 			{
+				len++;
 				slow = slow->next;
-					len++;
 			}
 			return (len);
 		}
