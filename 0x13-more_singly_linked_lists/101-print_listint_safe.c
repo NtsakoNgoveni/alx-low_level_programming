@@ -6,12 +6,14 @@
  */
 size_t list_len(const listint_t *h)
 {
-	const listint_t *slow = h->next;
-	const listint_t *fast = (h->next)->next;
+	const listint_t *slow, *fast;
 	size_t len = 1;
 
 	if (!h || h->next == NULL)
 		return (0);
+	slow = head->next;
+	fast = (head->next)->next;
+
 
 	while (slow)
 	{
