@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 /**
  * insert_nodeint_at_index - inserts new node at a specified index
