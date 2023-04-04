@@ -8,7 +8,7 @@ size_t list_len(const listint_t *h)
 {
 	const listint_t *fast = h;
 	const listint_t *slow = h;
-	size_t len = 0;
+	size_t len = 1;
 
 	if (!h || h->next == NULL)
 		return (0);
