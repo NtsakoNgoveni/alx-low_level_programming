@@ -28,7 +28,7 @@ char *make_buffer(char *file)
  */
 void close_file(int fd)
 {
-	int l;
+	int cl;
 
 	cl = close(fd);
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
 	buffer = make_buffer(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
-	rd = read(from, buffer, 1024);
+	rd = read(file_from, buffer, 1024);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		}
 
 		wd = write(file_to, buffer, rd);
-		if (to == -1 || wd == -1)
+		if (file_to == -1 || wd == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
@@ -79,8 +79,8 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		r = read(file_from, buffer, 1024);
-		to = open(argv[2], O_WRONLY | O_APPEND);
+		rd = read(file_from, buffer, 1024);
+		file_to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (rd > 0);
 

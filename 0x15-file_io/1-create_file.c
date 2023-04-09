@@ -7,8 +7,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t fd, wd;
-	unsigned long int i = 0, len = 0;
+	int fd, wd;
+	 int len = 0;
 
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC);
 	if (!filename || fd == -1)
@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content != NULL)
 	{
 
-	while (text_content[i])
+	while (text_content[len])
 		len++;
 	}
 	wd = write(fd, text_content, len);
