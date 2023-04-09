@@ -11,7 +11,7 @@ int create_file(const char *filename, char *text_content)
 	 int len = 0;
 
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC);
-	if (!filename || fd == -1)
+	if (!filename)
 		return (-1);
 
 	if (text_content != NULL)
@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 		len++;
 	}
 	wd = write(fd, text_content, len);
-	if (!wd || wd == -1)
+	if (fd == -1 || wd == -1)
 		return (-1);
 
 	close(fd);
