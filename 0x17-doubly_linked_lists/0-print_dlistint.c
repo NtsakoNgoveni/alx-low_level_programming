@@ -17,6 +17,5 @@ size_t print_dlistint(const dlistint_t *h)
 		count++;
 		ptr = ptr->next;
 	}
-	printf("-> %d elements", count);
 	return (count);
 }
