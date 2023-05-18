@@ -11,7 +11,7 @@ void free_dlistint(dlistint_t *head)
 	if (!head)
 		exit(1);
 
-	while (ptr)
+	while (head)
 	{
 		ptr = head->next;
 		free(head);
