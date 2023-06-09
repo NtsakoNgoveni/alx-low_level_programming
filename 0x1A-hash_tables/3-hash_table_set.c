@@ -7,40 +7,42 @@
  *Return: returns 1 if succesful and zero if failed
  */
 
-int hash_table_set(hash_table_t *ht, const  char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-hash_node_t *new_item;
-hash_node_t *tmp;
-unsigned long int index;
+    hash_node_t *new_item;
+    hash_node_t *tmp;
+    unsigned long int index;
 
-new_item = malloc(sizeof(hash_node_t));
-if (!new_item)
-	return (0);
-new_item->value = strdup(value);
-new_item->next = NULL;
-new_item->key = strdup(key);
-index = key_index((const unsigned char *)key, ht->size);
+    new_item = malloc(sizeof(hash_node_t));
+    if (!new_item || !key || *key == '\0' || !ht)
+        return 0;
 
-if (index >= ht->size)
-{
-free(new_item);
-free(ht->array);
-free(ht);
-return (0);
-}
+    new_item->value = strdup(value);
+    new_item->next = NULL;
+    new_item->key = strdup(key);
+    index = key_index((const unsigned char *)key, ht->size);
 
-if (ht->array[index] == NULL)
-{
-ht->array[index] = new_item;
-}
-else
-{
-tmp = ht->array[index];
-while (tmp->next)
-{
-tmp = tmp->next;
-}
-tmp->next = new_item;
-}
-return (1);
+    if (index >= ht->size)
+    {
+        free(new_item->value);
+        free(new_item->key);
+        free(new_item);
+        return 0;
+    }
+
+    if (ht->array[index] == NULL)
+    {
+        ht->array[index] = new_item;
+    }
+    else
+    {
+        tmp = ht->array[index];
+        while (tmp->next)
+        {
+            tmp = tmp->next;
+        }
+        tmp->next = new_item;
+    }
+
+    return 1;
 }
