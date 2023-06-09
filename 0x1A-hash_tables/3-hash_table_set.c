@@ -11,19 +11,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     hash_node_t *new_item;
     hash_node_t *tmp;
-    unsigned long int index;
+    unsigned long int index, i;
 
     new_item = malloc(sizeof(hash_node_t));
     if (!new_item || !key || *key == '\0' || !ht)
         return 0;
 
 	    index = key_index((const unsigned char *)key, ht->size);
+    for (i = index; ht->array[i]; i++)
+{ 
     if (strcmp(key, ht->array[index]->key))
     {
+	    free(new_item);
 	    free(ht->array[index]->value);
 	    ht->array[index]->value = strdup(value);
 	    return (1);
     }
+}
 
     new_item->value = strdup(value);
     new_item->next = NULL;
