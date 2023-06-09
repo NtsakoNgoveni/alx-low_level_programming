@@ -17,10 +17,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     if (!new_item || !key || *key == '\0' || !ht)
         return 0;
 
+	    index = key_index((const unsigned char *)key, ht->size);
+    if (strcmp(key, ht->array[index]->key))
+    {
+	    free(ht->array[index]->value);
+	    ht->array[index]->value = strdup(value);
+	    return (1);
+    }
+
     new_item->value = strdup(value);
     new_item->next = NULL;
     new_item->key = strdup(key);
-    index = key_index((const unsigned char *)key, ht->size);
 
     if (index >= ht->size)
     {
