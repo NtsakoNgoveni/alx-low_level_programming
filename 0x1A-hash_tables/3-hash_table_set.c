@@ -19,7 +19,7 @@ if (!new_item)
 new_item->value = strdup(value);
 new_item->next = NULL;
 new_item->key = strdup(key);
-index = key_index((const unsigned char*)key, ht->size);
+index = key_index((const unsigned char *)key, ht->size);
 
 if (index >= ht->size)
 {
