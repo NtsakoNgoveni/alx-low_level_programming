@@ -48,11 +48,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     else
     {
         tmp = ht->array[index];
-        while (tmp->next)
-        {
-            tmp = tmp->next;
-        }
-        tmp->next = new_item;
+        new_item->next = tmp;
+	ht->array[index] = new_item;
     }
 
     return 1;
